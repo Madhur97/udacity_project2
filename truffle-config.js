@@ -24,7 +24,11 @@
 
 // const HDWallet = require('truffle-hdwallet-provider');
 // const infuraKey = "fj4jll3k.....";
-//
+
+const HDWalletProvider = require('@truffle/hdwallet-provider');
+MNEMONIC = 'project antique velvet sleep sorry token milk kingdom path amused raw defy'
+PROJECT_ID = '3a749d3f3b36454b91fcebac3aab95bf'
+
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
@@ -46,12 +50,17 @@ module.exports = {
     // tab if you use this network and you must also set the `host`, `port` and `network_id`
     // options below to some value.
     //
-    development: {
-      host: "127.0.0.1",     // Localhost (default: none)
-      port: 9545,            // Standard Ethereum port (default: none)
-      network_id: "*",       // Any network (default: none)
+    // development: {
+    //   host: "127.0.0.1",     // Localhost (default: none)
+    //   port: 9545,            // Standard Ethereum port (default: none)
+    //   network_id: "*",       // Any network (default: none)
+    // },
+    sepolia: {
+      provider: () => new HDWalletProvider(MNEMONIC, `https://sepolia.infura.io/v3/${PROJECT_ID}`),
+        network_id: 11155111,
+        gas: 4465030,
+        gasPrice: 10000000000
     },
-
     // Another network with more advanced options...
     // advanced: {
       // port: 8777,             // Custom port
