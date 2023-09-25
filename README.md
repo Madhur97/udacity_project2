@@ -1,9 +1,14 @@
 Your ERC-721 Token Name - MADHURTOKEN
+
 Your ERC-721 Token Symbol - MTK 
+
 Version of the Truffle and OpenZeppelin used - 
+
 Truffle v5.11.3 (core: 5.11.3)
+
 Openzeppelin-solidity - 2.3
 Network used - Sepolia
+
 Your Token Address on the Sepolia Network - 0x46fc72d1aac8197233767f141a26c3506e186ce0
 
 
